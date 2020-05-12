@@ -1,0 +1,99 @@
+\documentclass[notes]{beamer}
+%
+% Choose how your presentation looks.
+%
+% For more themes, color themes and font themes, see:
+% http://deic.uab.es/~iblanes/beamer_gallery/index_by_theme.html
+%
+\mode<presentation>
+{
+  \usetheme{Madrid}      % or try Darmstadt, Madrid, Warsaw, ...
+  \usecolortheme{default} % or try albatross, beaver, crane, ...
+  \usefonttheme{default}  % or try serif, structurebold, ...
+  \setbeamertemplate{navigation symbols}{}
+  \setbeamertemplate{caption}[numbered]
+} 
+
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{import}
+%\usepackage{enumitem}
+
+\usepackage[
+backend=biber,
+style=numeric,
+sorting=none
+]{biblatex}
+
+\usepackage{csquotes}
+
+\bibliography{references_list.bib}
+% Removes icon in bibliography
+\setbeamertemplate{bibliography item}{\insertbiblabel}
+
+
+
+\title[Reciprocal Concept Map Collaboration]{
+%Reciprocal kit building
+%for collaboration: An analysis and evaluation of
+%collaborative task in the practical classroom
+% Analysis and evaluation of Reciprocal Kit Building
+% for collaborative problem solving in a practical classroom
+Reciprocal Concept Map Collaboration: Evaluating Group Products of Re-constructional Concept Maps
+}
+
+% The effect of RKB application 
+% To what extent the RKB approach influence collaborative product
+
+
+\author{Lia Sadita}
+\institute{Hiroshima University}
+\date{May, 2020}
+
+% \AtBeginSection[]
+% {
+%    \begin{frame}[allowframebreaks]% <beamer>
+%      \frametitle{Outline for section \thesection}
+%      \tableofcontents[currentsection]
+%    \end{frame}
+% }
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+% Uncomment these lines for an automatically generated outline.
+% \begin{frame}{Outline}
+%   \tableofcontents 
+% \end{frame}
+
+
+\section{Introduction}
+\import{./}{intro.tex}
+
+\section{Methods}
+\import{./}{method.tex}
+
+\section{RQ \#1: Analyzing the overall usefulness of the RKB approach on a practical classroom}
+\import{./}{a1_firstanalysis.tex}
+
+\section{RQ \#2: }
+\import{./}{a2_secondanalysis.tex}
+
+\section{RQ \#3: }
+\import{./}{a3_thirdanalysis.tex}
+
+%\section{Some \LaTeX{} Examples}
+%\import{./}{misc.tex}
+
+\begin{frame}[allowframebreaks]
+\frametitle{References}
+
+% This prints the bibliography on the slide
+\printbibliography
+\end{frame}
+
+\end{document}
