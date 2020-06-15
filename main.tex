@@ -1,4 +1,5 @@
 \documentclass[notes]{beamer}
+%\documentclass[11pt,handout]{beamer} % HANDOUT print
 %
 % Choose how your presentation looks.
 %
@@ -7,7 +8,7 @@
 %
 \mode<presentation>
 {
-  \usetheme{Madrid}      % or try Darmstadt, Madrid, Warsaw, ...
+  \usetheme{Antibes}      % or try Darmstadt, Madrid, Warsaw, ...
   \usecolortheme{default} % or try albatross, beaver, crane, ...
   \usefonttheme{default}  % or try serif, structurebold, ...
   \setbeamertemplate{navigation symbols}{}
@@ -18,7 +19,9 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{import}
-%\usepackage{enumitem}
+%\usepackage{xcolor}
+\usepackage{CJKutf8}
+\usepackage{xcolor}
 
 \usepackage[
 backend=biber,
@@ -32,44 +35,69 @@ sorting=none
 % Removes icon in bibliography
 \setbeamertemplate{bibliography item}{\insertbiblabel}
 
-
-
-\title[Reciprocal Concept Map Collaboration]{
 %Reciprocal kit building
 %for collaboration: An analysis and evaluation of
 %collaborative task in the practical classroom
 % Analysis and evaluation of Reciprocal Kit Building
 % for collaborative problem solving in a practical classroom
-Reciprocal Concept Map Collaboration: Evaluating Group Products of Re-constructional Concept Maps
+% Reciprocal Concept Map Collaboration: Evaluating Group Products of Re-constructional Concept Maps
+% Collaboration with Reciprocal Kit-Build
+
+
+% \emph{PhD Preliminary Defense}
+\title[Collaboration with Reciprocal KB]{
+    Collaboration with Reciprocal Kit-Build: An analysis of group products
 }
 
-% The effect of RKB application 
-% To what extent the RKB approach influence collaborative product
+% \begin{CJK}{UTF8}{min}
+\subtitle{(相互キットビルドコンセプトマップを用いたコラボレーション：グループ生産物の分析)}
+% \end{CJK}
+\author[Lia S.]{Lia Sadita (D171171)}
+\institute[Hiroshima Univ.]{
+    Learning Engineering Laboratory,
+    Dept. of Information Engineering \\ 
+    Hiroshima University}
+\date{June, 2020}
 
+\addtobeamertemplate{title page}{\begin{center}{\small PhD Preliminary Defense}\end{center}}{
+\footnotesize{\begin{center}
+Supervisors: 
+Prof. Tsukasa Hirashima, Prof. Kazufumi Kaneda, \& Dr. Yusuke Hayashi
+\end{center}}}
 
-\author{Lia Sadita}
-\institute{Hiroshima University}
-\date{May, 2020}
+% Supervisors:
+% Prof. Tsukasa Hirashima
+% Prof. Kazufumi Kaneda
+% Dr. Yusuke Hayashi
+
+\logo{\includegraphics[height=1cm]{images/logo-hu.png}}
 
 \AtBeginSection[]
 {
-    \begin{frame}[allowframebreaks]% <beamer>
-    \frametitle{Outline for section \thesection}
-    \tableofcontents[currentsection,currentsubsection]
-    \end{frame}
+
+    \ifnum \value{framenumber}>4
+      \begin{frame}<beamer>
+      \frametitle{Outline for section \thesection}
+      \tableofcontents[sections=\value{section}]
+      \end{frame}
+    \else
+    \fi
+    
 }
 
 \begin{document}
-
+\begin{CJK}{UTF8}{min}
 \begin{frame}
   \titlepage
 \end{frame}
 
-% Uncomment these lines for an automatically generated outline.
-% \begin{frame}{Outline}
-%   \tableofcontents 
-% \end{frame}
+%\section{Summary}
+\import{./}{summary.tex}
 
+% Uncomment these lines for an automatically generated outline.
+\begin{frame}[allowframebreaks]{Outline}
+  \tableofcontents[hideallsubsections] 
+\end{frame}
 
 \section{Introduction}
 \import{./}{intro.tex}
@@ -77,26 +105,32 @@ Reciprocal Concept Map Collaboration: Evaluating Group Products of Re-constructi
 \section{Methods}
 \import{./}{method.tex}
 
-\section{The effectiveness of the RKB approach for group collaboration}
-\import{./}{a1_firstanalysis.tex}
+\section{RKB evaluation on collaborative products and students’perspective toward the activities}
+\import{./}{a1_groupcollab.tex}
 
-\section{The effect of differences in group composition on 
-knowledge transfer, group achievement and learners' affective}
-\import{./}{a2_secondanalysis.tex}
+\section{The effect of individual knowledge differences to group collaboration}
+\import{./}{a2_knowledgediff.tex}
 
-\section{Analysis of the similarity of 
-individual knowledge and the comprehension of partner's representation during 
-collaborative concept mapping}
-\import{./}{a3_thirdanalysis.tex}
+\section{Predicting collaborative products based on
+similarity of knowledge and comprehension of partner's 
+representation}
+\import{./}{a3_prediction.tex}
 
 \section{Conclusion}
 \import{./}{conclusion.tex}
 
 \begin{frame}[allowframebreaks]
 \frametitle{References}
-
 % This prints the bibliography on the slide
 \printbibliography
 \end{frame}
 
+\begin{frame}{Thank you}
+    Thank your for your attention
+\end{frame}
+
+\section{Supplementary}
+\import{./}{supplementary.tex}
+
+\end{CJK}
 \end{document}
